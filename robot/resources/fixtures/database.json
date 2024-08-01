@@ -1,0 +1,19 @@
+{    
+    "clientpf": {
+        "cpf": "00000529141",
+        "birth": "28/06/1984",
+        "phone": "",
+        "phone_nao_tim":"",
+        "ddd": "",
+        "number": "",
+        "email": ""
+    },
+    "clientpj": {
+        "cnpj": "07825833000130",
+        "phone": "",
+        "phone_nao_tim":"",
+        "ddd": "",
+        "number": "",
+        "email": ""
+    }
+}

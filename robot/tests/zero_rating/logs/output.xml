@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 5.0.1 (Python 3.8.10 on linux)" generated="20220930 16:18:51.626" rpa="false" schemaversion="3">
+<suite id="s1" name="Tests" source="/home/arion/Desktop/projetos/cronos/tim_negocia/zero_rating/tests">
+<suite id="s1-s1" name="Storage" source="/home/arion/Desktop/projetos/cronos/tim_negocia/zero_rating/tests/storage.robot">
+<test id="s1-s1-t1" name="Cenário 01: Arquivos google storage (prod)" line="7">
+<kw name="New Browser" library="Browser">
+<arg>chromium</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<msg timestamp="20220930 16:18:52.555" level="INFO">{"browser": "chromium", "headless": true, "handleSIGINT": true, "handleSIGTERM": true, "handleSIGHUP": true, "timeout": 30000.0, "devtools": false, "slowMo": 0.0, "tracesDir": "/home/arion/Desktop/projetos/cronos/tim_negocia/zero_rating/logs/browser/traces/20d017c5-6b09-48d7-81ac-8eac71d46196"}</msg>
+<msg timestamp="20220930 16:18:52.824" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"handleSIGINT":true,"handleSIGTERM":true,"handleSIGHUP":true,"timeout":30000,"devtools":false,"slowMo":0,"tracesDir":"/home/arion/Desktop/projetos/cronos/tim_negocia/zero_rating/logs/browser/traces/20d017c5-6b09-48d7-81ac-8eac71d46196"}</msg>
+<status status="PASS" starttime="20220930 16:18:52.554" endtime="20220930 16:18:52.825"/>
+</kw>
+<kw name="New Page" library="Browser">
+<arg>https://timnegocia.com.br/</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<msg timestamp="20220930 16:18:55.516" level="INFO">Successfully initialized new page object and opened url: https://timnegocia.com.br/</msg>
+<msg timestamp="20220930 16:18:55.516" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<status status="PASS" starttime="20220930 16:18:52.825" endtime="20220930 16:18:55.516"/>
+</kw>
+<kw name="Get Element Count" library="Browser">
+<var>${img}</var>
+<arg>css=img[src*="storage"]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the count of elements found with ``selector``.</doc>
+<msg timestamp="20220930 16:18:55.560" level="INFO">${img} = 27</msg>
+<status status="PASS" starttime="20220930 16:18:55.517" endtime="20220930 16:18:55.561"/>
+</kw>
+<kw name="Get Element Count" library="Browser">
+<var>${analytics}</var>
+<arg>css=script[src*="analytics"]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the count of elements found with ``selector``.</doc>
+<msg timestamp="20220930 16:18:55.570" level="INFO">${analytics} = 1</msg>
+<status status="PASS" starttime="20220930 16:18:55.561" endtime="20220930 16:18:55.571"/>
+</kw>
+<kw name="Get Element Count" library="Browser">
+<var>${hotjar}</var>
+<arg>css=script[src*="hotjar"]</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the count of elements found with ``selector``.</doc>
+<msg timestamp="20220930 16:18:55.579" level="INFO">${hotjar} = 1</msg>
+<status status="PASS" starttime="20220930 16:18:55.571" endtime="20220930 16:18:55.579"/>
+</kw>
+<kw name="Log" library="BuiltIn">
+<arg>${img}</arg>
+<arg>+</arg>
+<arg>${analytics}</arg>
+<arg>+</arg>
+<arg>${hotjar}</arg>
+<doc>Logs the given message with the given level.</doc>
+<msg timestamp="20220930 16:18:55.580" level="WARN">The 'repr' argument of 'BuiltIn.Log' is deprecated. Use 'formatter=repr' instead.</msg>
+<msg timestamp="20220930 16:18:55.582" level="FAIL">Invalid log level '+'.</msg>
+<status status="FAIL" starttime="20220930 16:18:55.580" endtime="20220930 16:18:55.582"/>
+</kw>
+<status status="FAIL" starttime="20220930 16:18:52.550" endtime="20220930 16:18:55.582">Invalid log level '+'.</status>
+</test>
+<doc>Teste referente à remoção de arquivos externos ao portal</doc>
+<status status="FAIL" starttime="20220930 16:18:51.664" endtime="20220930 16:18:55.633"/>
+</suite>
+<status status="FAIL" starttime="20220930 16:18:51.629" endtime="20220930 16:18:55.642"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="0" fail="1" skip="0" id="s1-s1" name="Storage">Tests.Storage</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20220930 16:18:55.580" level="WARN">The 'repr' argument of 'BuiltIn.Log' is deprecated. Use 'formatter=repr' instead.</msg>
+</errors>
+</robot>
