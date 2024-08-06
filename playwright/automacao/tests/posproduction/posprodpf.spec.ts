@@ -11,6 +11,7 @@ let debts: DebtsPage
 let data: GetData
 let component: Components
 
+
 test.beforeEach(async ({ page })=> {
     login = new LoginPage(page)
     token = new TokenPage(page)
