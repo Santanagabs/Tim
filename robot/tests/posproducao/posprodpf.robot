@@ -6,7 +6,7 @@ Suite Setup                         Abrir Navegador
 Test Setup                          Go To Portal
 
 * Test Cases *
-Validação Pós Produção
+Validação Pós Produção 
     Client PF
     Botao Acessar Portal
     Validar Copyright

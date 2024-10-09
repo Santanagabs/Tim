@@ -13,7 +13,7 @@ export class Components {
         const textoCopyright = await this.page.locator('//p[contains(text(),"©")]').textContent()
         expect(textoCopyright).toContain('Webhelp')
         expect(textoCopyright).toContain('2023')
-    } 
+    }
 
     async validarPoliticaDePrivacidade() {
         await this.page.click('//footer//a[text()="Política de privacidade"]')
